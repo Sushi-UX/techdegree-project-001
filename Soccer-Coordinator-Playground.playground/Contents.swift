@@ -115,8 +115,8 @@ func sortPlayers() {
         }
     }
 
-    experienceYes.sort(by: {($0["height"]! as String) > $1["height"]! as String})
-    experienceNo.sort(by: {($0["height"]! as String) > $1["height"]! as String})
+    experienceYes.sort(by: {($0["height"]!) > $1["height"]!})
+    experienceNo.sort(by: {($0["height"]!) > $1["height"]!})
 
     assignTeams(ofPlayers: experienceYes)
     assignTeams(ofPlayers: experienceNo)
