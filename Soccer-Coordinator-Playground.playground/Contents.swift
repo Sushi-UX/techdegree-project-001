@@ -171,10 +171,10 @@ func assignTeams(ofPlayers players: [[String: String]]) {
     }
 }
 
-func playersAverageHeight(ofTeams teams: [String]) {
+func calculateAverageHeight(ofTeams teams: [String])    {
 for team in teams {
-    var overallHeight: Double = 0.0
-    var averageHeight: Double = 0.0
+    var teamTotalHeight: Double = 0.0
+    var teamAverageHeight: Double = 0.0
     var members: [[String: String]] = []
     if team == "Dragons"    {
         members = teamDragons
@@ -184,12 +184,12 @@ for team in teams {
         members = teamRaptors
     }
     for member in members {
-        if let height = Double(member["height"]!) {
-            overallHeight = overallHeight + height
+        if let height = Double(member["height"]!)    {
+            teamTotalHeight = teamTotalHeight + height
         }
     }
-    overallHeight = overallHeight/Double(members.count)
-    print("\(team) average height: \(averageHeight)")
+    teamAverageHeight = teamTotalHeight/Double(members.count)
+    print("\(team) avergage height: \(teamAverageHeight)")
     }
 }
 
@@ -203,4 +203,4 @@ func mailLetters(toGaurdians letters: [[String: String]]) {
 sortPlayers()
 letters = writeLetters(toTeams: allTeams)
 mailLetters(toGaurdians: letters)
-// calculateAverageHeight(ofTeams: allTeams)
+calculateAverageHeight(ofTeams: allTeams)
