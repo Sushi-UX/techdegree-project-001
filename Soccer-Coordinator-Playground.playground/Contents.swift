@@ -1,3 +1,4 @@
+// Raymond Choy aka: Sushi-UX
 // Treehouse Tech degree - Unit 001 - Soccer Coordinator
 
 // Manually create a single collection of all the players each having their own dictionary
